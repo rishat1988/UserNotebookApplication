@@ -13,8 +13,6 @@ public class PhoneBook {
     private String phoneNumber;
     private User user;
 
-//    private List<Route> routes;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
