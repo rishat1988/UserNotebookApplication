@@ -8,7 +8,9 @@ public interface UserService {
 
     List< User > getUsers();
 
-    void saveUser(User user) ;
+    User save (User user);
+
+    User create (User user) ;
 
     User getUser  (int Id) throws Exception;
 

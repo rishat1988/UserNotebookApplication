@@ -20,10 +20,21 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll();
     }
 
+//    @Override
+//    public  saveUser(User user) throws Exception {
+//        return  userRepository.save(user);
+//    }
+@Override
+public User save(User user)
+{return userRepository.save(user);
+
+}
+
+
     @Override
-    public void saveUser(User user) {
-        userRepository.save(user);
-    }
+    public User create(User user) {
+        return null;
+    };
 
     @Override
     public User getUser(int id) throws Exception {
