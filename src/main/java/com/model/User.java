@@ -10,7 +10,7 @@ public class User {
     @Id
     private int id;
     private String name;
-    private PhoneBook phoneBook;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +36,7 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "phonebook_id", referencedColumnName = "id")
-
+    private PhoneBook phoneBook;
 
     public PhoneBook getPhoneBook() {
         return phoneBook;

@@ -18,13 +18,17 @@ public class PhoneBookServiceImpl implements PhoneBookService {
     @Override
     public List< PhoneBook > getPhoneBooks(){return phoneBookRepository.findAll();}
 
-    @Override
-   public void savePhoneBook(PhoneBook phoneBook)  {phoneBookRepository.save(phoneBook);}
+//    @Override
+//   public void savePhoneBook(PhoneBook phoneBook)  {phoneBookRepository.save(phoneBook);}
 
     @Override
    public PhoneBook getPhoneBook  (int id) throws Exception{
         return phoneBookRepository.findById(id).orElseThrow(() -> new Exception(String.valueOf(id)));
     }
+
+    public PhoneBook save (PhoneBook phoneBook){return phoneBookRepository.save(phoneBook);}
+
+    public PhoneBook create (PhoneBook phoneBook){return null;} ;
 
 
     @Override

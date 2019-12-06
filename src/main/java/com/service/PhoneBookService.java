@@ -8,7 +8,10 @@ public interface PhoneBookService {
 
     List< PhoneBook > getPhoneBooks();
 
-    void savePhoneBook(PhoneBook phoneBook) ;
+
+    PhoneBook save (PhoneBook phoneBook);
+
+    PhoneBook create (PhoneBook phoneBook) ;
 
     PhoneBook getPhoneBook  (int Id) throws Exception;
 

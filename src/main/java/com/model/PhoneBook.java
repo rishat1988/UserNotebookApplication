@@ -11,7 +11,7 @@ public class PhoneBook {
     private int id;
     private String surname;
     private String phoneNumber;
-    private User user;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,17 +44,16 @@ public class PhoneBook {
         this.phoneNumber = phoneNumber;
     }
 
-    @OneToOne(mappedBy = "phonebook")
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "phonebook")
+    private User user;
 
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
-        this. user =  user;
+        this.user =  user;
     }
-
-
 
 
     @Override
